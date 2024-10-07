@@ -1,0 +1,98 @@
+/* Experience section styling */
+#experience {
+  background-color: white;  /* Full white background */
+  padding: 5rem 2rem;
+  color: #1e1e1e;
+  min-height: 100vh;        /* Ensure it takes full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Section title styling */
+#experience h2 {
+  font-family: 'Avenir', 'Proxima Nova', sans-serif;
+  font-size: 3rem;  /* Ensure the same size as Education */
+  margin-top: -5rem;  /* Move the title higher */
+  margin-bottom: 2rem;
+}
+
+/* Each experience item styling */
+.experience-item {
+  margin-bottom: 2rem;
+}
+
+/* Flexbox for the header part */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: #4d4d4d;
+  margin-bottom: 1rem;
+}
+
+/* Period of the job */
+.experience-period {
+  font-weight: 600;
+  font-size: 1rem;  /* Keep the text size consistent with Education */
+  color: #666;
+}
+
+/* Role and company */
+.experience-role {
+  font-size: 1.2rem;  /* Match the font size with Education content */
+  font-weight: bold;
+  color: #1e1e1e;
+}
+
+.experience-company {
+  font-weight: normal;
+  color: #666;
+  font-size: 1.2rem;  /* Ensure the same size for company name */
+}
+
+/* Description paragraph */
+.experience-description {
+  font-family: 'Avenir', 'Proxima Nova', sans-serif;
+  font-size: 0.8rem !important;  /* Force the description font smaller */
+  line-height: 1.6 !important;  /* Adjusted line height */
+  color: #050505 !important;
+  max-width: 800px;
+}
+
+/* Tags (JavaScript, React, etc.) */
+.experience-tags {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 20px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.6rem;  /* Same tag size as in Education section */
+  font-family: 'Avenir', 'Proxima Nova', sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-role, .experience-company {
+    font-size: 1.4rem;  /* Adjust font size for smaller screens */
+  }
+
+  .experience-description {
+    font-size: 0.8rem !important;  /* Force smaller font size for mobile */
+  }
+
+  .tag {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,94 @@
+/* Styling for Projects section */
+#project {
+  background-color: white;
+  padding: 3rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#project h2 {
+  font-family: 'Avenir', 'Proxima Nova', sans-serif;
+  font-size: 3rem;
+  margin-top: -4rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #2c98f0;
+}
+
+/* Flexbox layout for projects to be side by side */
+.project-grid {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto; /* Make the container scrollable horizontally */
+  padding: 1rem;
+}
+
+.project-item {
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 280px;
+  min-width: 280px; 
+  max-height: 500px;
+  min-height: 500px; /* Set a minimum width so they don't shrink too much */
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+}
+
+.project-thumbnail {
+  width: 100%;  /* Make it responsive */
+  height: 150px; /* Set a fixed height for uniformity */
+  object-fit: cover;  /* Ensure the image covers the box and keeps aspect ratio */
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-info h3 {
+  font-size: 1rem;
+  color: #1e1e1e;
+  margin-bottom: 0.5rem;
+}
+
+#project .project-info p {
+  font-size: 0.75rem;
+  color: #333 !important;  /* Force the color to apply */
+  margin-bottom: 1rem;
+}
+
+/* Technologies tags */
+.technologies {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 20px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  font-family: 'Avenir', 'Proxima Nova', sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .project-grid {
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .project-item {
+    max-width: 100%;
+    min-width: 250px;
+  }
+}
