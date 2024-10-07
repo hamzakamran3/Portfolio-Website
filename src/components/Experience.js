@@ -25,7 +25,7 @@ function Experience() {
       tags: ['Data Entry']
     },
 
-    // Add more experiences here...
+
   ];
 
   return (
