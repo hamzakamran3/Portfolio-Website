@@ -2,7 +2,7 @@
   background-color: #2c98f0;
   color: white;
   display: flex;
-  justify-content: space-around; /* Add more space between columns */
+  justify-content: space-around; 
   align-items: flex-start;
   padding: 1rem;
   flex-wrap: wrap;
@@ -11,7 +11,7 @@
 
 .footer-column {
   flex: 1;
-  margin: 0 10rem; /* Increase margin between columns */
+  margin: 0 10rem;
 }
 
 .footer-column h4 {
@@ -20,7 +20,7 @@
 }
 
 .footer-column p {
-  font-size: 1rem; /* Increase the text size for 'Portfolio Website' */
+  font-size: 1rem; 
 }
 
 .footer-column ul {
