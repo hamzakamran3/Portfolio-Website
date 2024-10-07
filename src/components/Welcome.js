@@ -5,10 +5,9 @@ import './Welcome.css';
 function Welcome() {
   useEffect(() => {
     // Scroll to a specific Y position within the Welcome section
-    // window.scrollTo(x-coord, y-coord);
     window.scrollTo({
       top: 200, // 200px down from the top of the page
-      behavior: 'smooth', // Optional: smooth scroll
+      behavior: 'smooth', 
     });
   }, []);
   return (
