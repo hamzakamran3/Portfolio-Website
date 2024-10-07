@@ -13,7 +13,7 @@
 #experience h2 {
   font-family: 'Avenir', 'Proxima Nova', sans-serif;
   font-size: 3rem;  /* Ensure the same size as Education */
-  margin-top: -5rem;  /* Move the title higher */
+  margin-top: -5rem;  
   margin-bottom: 2rem;
 }
 
@@ -35,13 +35,13 @@
 /* Period of the job */
 .experience-period {
   font-weight: 600;
-  font-size: 1rem;  /* Keep the text size consistent with Education */
+  font-size: 1rem;  
   color: #666;
 }
 
 /* Role and company */
 .experience-role {
-  font-size: 1.2rem;  /* Match the font size with Education content */
+  font-size: 1.2rem;
   font-weight: bold;
   color: #1e1e1e;
 }
@@ -49,14 +49,14 @@
 .experience-company {
   font-weight: normal;
   color: #666;
-  font-size: 1.2rem;  /* Ensure the same size for company name */
+  font-size: 1.2rem;  
 }
 
 /* Description paragraph */
 .experience-description {
   font-family: 'Avenir', 'Proxima Nova', sans-serif;
-  font-size: 0.8rem !important;  /* Force the description font smaller */
-  line-height: 1.6 !important;  /* Adjusted line height */
+  font-size: 0.8rem !important;  
+  line-height: 1.6 !important;  
   color: #050505 !important;
   max-width: 800px;
 }
@@ -73,7 +73,7 @@
   color: white;
   border-radius: 20px;
   padding: 0.3rem 0.8rem;
-  font-size: 0.6rem;  /* Same tag size as in Education section */
+  font-size: 0.6rem; 
   font-family: 'Avenir', 'Proxima Nova', sans-serif;
 }
 
