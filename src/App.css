@@ -9,14 +9,14 @@ body {
   font-size: 14px; 
     overflow-x: hidden;  /* Prevent horizontal scrolling */
     width: 100%;  /* Ensure full width */
-    box-sizing: border-box; /* Set a smaller base font size */
+    box-sizing: border-box; 
 }
 
 /* Full height sections */
 .section {
   min-height: 50vh;
   max-height: 50vh;
-  padding: 3rem 1.5rem; /* Reduced padding */
+  padding: 3rem 1.5rem; 
   text-align: center;
   display: flex;
   justify-content: center;
@@ -35,7 +35,7 @@ body {
 
 /* Header styling */
 header {
-  height: 40px; /* Set a smaller height */
+  height: 40px; 
   position: fixed;
   width: 100%;
   top: 0;
@@ -53,7 +53,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
-  gap: 1rem; /* Reduced gap */
+  gap: 1rem;
 }
 
 nav ul li {
@@ -64,9 +64,9 @@ nav ul li button {
   background: none;
   border: none;
   color: #61dafb;
-  font-size: 1rem; /* Reduce font size */
+  font-size: 1rem;
   cursor: pointer;
-  padding: 0.5rem 1rem; /* Reduced padding inside buttons */
+  padding: 0.5rem 1rem;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
@@ -94,14 +94,14 @@ nav ul li button.active {
 
 /* Styling for the section headings */
 h2 {
-  font-size: 2rem;  /* Reduced font size for headings */
+  font-size: 2rem; 
 
   color: #2c98f0;
 }
 
 /* Paragraphs */
 p {
-  font-size: 0.5rem;  /* Reduced font size for paragraph text */
+  font-size: 0.5rem; 
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
