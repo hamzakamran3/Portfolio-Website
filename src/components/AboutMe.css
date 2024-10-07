@@ -1,41 +1,41 @@
 /* About Me section styling */
 #about {
-  background-color: white;  /* Ensure full white background */
-  padding: 5rem 2rem;       /* Add padding to give space around content */
-  color: #1e1e1e;           /* Dark text for readability */
-  min-height: 100vh;        /* Ensure it takes full screen height */
+  background-color: white;  
+  padding: 5rem 2rem;       
+  color: #1e1e1e;           
+  min-height: 100vh;        
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align the content at the top */
+  justify-content: flex-start; 
 }
 
-/* Ensure extra space between the title and the top of the section */
+
 #about h2 {
   font-family: 'Avenir', 'Proxima Nova', sans-serif;
-  margin-top: -5rem;         /* Add extra space from the top */
-  font-size: 3rem;          /* Keep the font size consistent */
+  margin-top: -5rem;       
+  font-size: 3rem;          
 }
 
-/* Remove content box style */
+
 #about .content-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0;                /* Remove margins */
-  padding: 0;               /* Remove padding */
-  background: none;         /* Remove any background */
-  box-shadow: none;         /* Remove shadow */
-  border: none;             /* Remove any borders */
-  max-width: none;          /* Remove max width restriction */
+  margin: 0;               
+  padding: 0;               
+  background: none;       
+  box-shadow: none;         
+  border: none;            
+  max-width: none;          
 }
 
-/* Ensure wider text layout */
+
 #about .content-box p {
   font-family: 'Avenir', 'Proxima Nova', sans-serif;
   font-size: 1rem;   
-  color: #4d4d4d;   /* Smaller text size */
-  line-height: 1.8;         /* Adjusted line height for readability */
-  max-width: 800px;         /* Reduced width constraint */
+  color: #4d4d4d;   
+  line-height: 1.8;         
+  max-width: 800px;         
   margin: 0 auto;
   text-align: left;
 }
@@ -60,6 +60,6 @@
 
   #about .content-box p {
     max-width: 100%;
-    font-size: 1rem;        /* Smaller font size on mobile */
+    font-size: 1rem;      
   }
 }
