@@ -1,0 +1,82 @@
+/* About Me section styling */
+#education {
+  background-color: white;  /* Ensure full white background */
+  padding: 5rem 2rem;       /* Add padding to give space around content */
+  color: #1e1e1e;           /* Dark text for readability */
+  min-height: 100vh;        /* Ensure it takes full screen height */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align the content at the top */
+}
+
+/* Ensure extra space between the title and the top of the section */
+#education h2 {
+  font-family: 'Avenir', 'Proxima Nova', sans-serif;
+  margin-top: -5rem;         /* Add extra space from the top */
+  font-size: 3rem;          /* Keep the font size consistent */
+}
+
+/* Remove content box style */
+#education .content-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;                /* Remove margins */
+  padding: 0;               /* Remove padding */
+  background: none;         /* Remove any background */
+  box-shadow: none;         /* Remove shadow */
+  border: none;             /* Remove any borders */
+  max-width: none;          /* Remove max width restriction */
+}
+
+/* Ensure wider text layout */
+#education .content-box p {
+  font-family: 'Avenir', 'Proxima Nova', sans-serif;
+  font-size: 1rem;   
+  color: #4d4d4d;   /* Smaller text size */
+  line-height: 1.8;         /* Adjusted line height for readability */
+  max-width: 800px;         /* Reduced width constraint */
+  margin: 0 auto;
+  text-align: left;
+}
+
+#education .content-course  {
+  display: flex;
+  justify-content: space-between;
+}
+
+#education .content-course p {
+  font-family: 'Avenir', 'Proxima Nova', sans-serif;
+  font-size: 0.8rem;  
+  flex: 1;
+  margin: 0 10px; 
+  color: #4d4d4d;   /* Smaller text size */
+  line-height: 1.8;         /* Adjusted line height for readability */
+  max-width: 800px;         /* Reduced width constraint */
+  margin: 0 auto;
+  text-align: left;
+}
+
+.education-image {
+  margin-left: 100px;
+}
+.education-image img{
+  max-width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #education .content-box {
+    flex-direction: column;
+  }
+
+
+
+  #education .content-box p {
+    max-width: 100%;
+    font-size: 1rem;        /* Smaller font size on mobile */
+  }
+}
