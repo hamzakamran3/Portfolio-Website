@@ -7,22 +7,22 @@ function Experience() {
       role: 'Software Development Intern',
       company: 'J.D. Power',
       period: 'May 2023 — September 2024',
-      description: `Software sustain work for one of the company's larger projects as one of the main developers. Supported QA creating automated tests scripts in Playwright. Supported the DevOps for the projects. `,
+      description: `Increased system stability by 15% for 5,000+ daily users by fixing critical bugs and adding key features. Improved page load speed by 25%, enhancing UX for 10,000+ monthly users, by optimizing HTML/CSS, JavaScript, and React.js. Improved API efficiency by 25% and reduced server response times by 20% by optimizing SQL queries and developing back-end APIs in Java with Spring Boot. Reduced production bugs by 15% by implementing Playwright tests with 95% coverage.`,
       tags: ['JavaScript', 'Java', 'TypeScript', 'React', 'MSSQL', 'Springboot', 'PlayWright', 'Node.JS'],
     },
     {
-      role: 'Administrative Assistant',
-      company: 'OnShore Advisors',
-      period: 'January 2018 — January 2019',
-      description: `Worked on various Excel spreadsheets, maintained files and provided customer service`,
-      tags: ['Microsoft Excel', 'Customer Service', 'Microsoft Powerpoint', 'Data Entry'],
+      role: 'Software Engineer Intern',
+      company: 'Swimingo',
+      period: 'May 2022 — August 2022',
+      description: `Built and deployed a MEAN(MongoDB, Express, AngularJS, Node.js) stack lesson booking platform for a seed-stage startup, reducing manual bookings by 50% and increasing user satisfaction by 20%. Optimized MySQL queries, cutting lesson search and booking times by 30% for 2,000+ users. Implemented GCP auto-scaling and storage, reducing server downtime by 40% and lowering cloud costs by 20%.`,
+      tags: ['MongoDB', 'Express', 'AngularJS', 'Node.js', 'MySQL', 'GCP'],
     },
     {
       role: 'Shipper/Receiver',
       company: 'Caliber Industrial Supply',
       period: 'May 2022 — September 2022',
-      description: `Monitored scheduled shipment dates to achieve timely delivery`,
-      tags: ['Data Entry']
+      description: `Built a financial dashboard using Python, Pandas & Matplotlib, reducing report generation time by 30% for advisors. Analyzed 50K+ transactions in SQL, Excel & Power BI, identifying trends to improve client investment strategies. Developed a simple predictive model in Scikit-Learn, increasing the accuracy of client risk assessments by 15%.`,
+      tags: ['Python', 'Pandas', 'Matplotlib', 'SQL', 'Excel', 'Power BI', 'Scikit-Learn']
     },
 
     // Add more experiences here...
