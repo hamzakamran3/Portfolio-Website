@@ -8,15 +8,10 @@ function AboutMe() {
       <h2>About Me</h2>
       <div className="content-box">
         <p>
-Hello, I'm Hamza Kamran, a full-stack software developer who is looking to be a part of a motivated team. 
-As of September 2024, I am in my final year of Software Engineering at Western University, and I couldn't be more excited for what the future holds.
-In terms of programming, my education and co-op experience has greatly improved my skillset and made me in to a very confident developer. I have extensive knowledge on multiple languages such as: Java, JavaScript, Python, HTML/CSS, TypeScript, SQL, C# and C++.
-<br /><br />I also have experience in databases such as: MSSQL and MySQL, and experience with a lot of other necessary tools such as GitHub, GitLab, React, Springboot, MongoDB, Unity Game Development, Node.Js and REST API.
-My Co-op experience also greatly strengthend me as a debugger and even gave me some experience as a QA.
-This has turned me into a very strong full stack developer that is ready to help out any team right away.
-<br /><br />I love solving complex problems and building challenging web applications.
- Currently looking for opportunities in full-stack development!
-</p>
+        Hello, I'm Hamza Kamran. I'm a Junior Data Engineer and a graduate of Software Engineering from Western University, with a strong foundation in full-stack development and a growing interest in data-driven products.
+<br /><br />In my current role, I work closely with the product team to build scalable data pipelines, internal tools, and dashboards that support key business decisions. I’ve developed interactive analytics solutions using Dash and Plotly, automated infrastructure with Docker and Terraform, and used BigQuery and other Google Cloud Platform services to process large datasets. Collaborating directly with product stakeholders has helped me understand how technical solutions can be shaped by user needs and product goals.
+<br /><br />My technical experience includes working with Python, SQL, JavaScript, Java, TypeScript, C++, and C#. I'm also comfortable with tools and frameworks such as React, Node.js, Spring Boot, MongoDB, and Unity. During my previous software development internship, I focused on improving system stability and API performance for a widely used platform, which further developed my skills in debugging, testing, and building reliable systems.
+I enjoy solving problems that have real impact and building software that is both technically sound and user-focused.</p>
         <img src={myImage} alt="About Me" className="about-image" />
       </div>
     </section>
