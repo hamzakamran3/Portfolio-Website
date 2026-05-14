@@ -1,123 +1,148 @@
-/* General body styling */
+:root {
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-accent: #06b6d4;
+  --color-dark: #0f172a;
+  --color-text: #1e293b;
+  --color-text-muted: #64748b;
+  --color-bg: #ffffff;
+  --color-bg-soft: #f8fafc;
+  --color-bg-alt: #f1f5f9;
+  --color-border: #e2e8f0;
+  --color-surface: #ffffff;
+
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 20px 50px rgba(15, 23, 42, 0.10);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --gradient-primary: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+  --gradient-hero: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #06b6d4 100%);
+
+  --container: 1140px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Avenir', 'Proxima Nova', sans-serif;
-  background-color: #2c98f0;
-  color: #2c98f0;
-  scroll-behavior: smooth;
-  font-size: 14px; 
-    overflow-x: hidden;  /* Prevent horizontal scrolling */
-    width: 100%;  /* Ensure full width */
-    box-sizing: border-box; /* Set a smaller base font size */
-}
-
-/* Full height sections */
-.section {
-  min-height: 50vh;
-  max-height: 50vh;
-  padding: 3rem 1.5rem; /* Reduced padding */
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-  overflow-x: hidden; 
-  transform: translateY(0);
-}
-
-/* Active sections will have the transition for opacity and movement */
-.section.active {
-  opacity: 1;
-  transform: translateY(0); /* No movement */
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-/* Header styling */
-header {
-  height: 40px; /* Set a smaller height */
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 main {
-  margin-top: 300px; /* Ensure the main content starts below the header */
+  margin-top: 0;
+  padding-top: 0;
 }
 
-/* Navigation menu in the header */
-nav ul {
-  list-style-type: none;
-  margin: 0;
+.section {
+  display: block;
+  min-height: auto;
+  max-height: none;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 1rem; /* Reduced gap */
+  text-align: left;
+  overflow: visible;
+  opacity: 1;
+  transform: none;
 }
 
-nav ul li {
-  display: inline-block;
+h1, h2, h3, h4, h5 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--color-dark);
+  line-height: 1.2;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
 }
 
-nav ul li button {
-  background: none;
-  border: none;
-  color: #61dafb;
-  font-size: 1rem; /* Reduce font size */
-  cursor: pointer;
-  padding: 0.5rem 1rem; /* Reduced padding inside buttons */
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-nav ul li button.active {
-  background-color: #61dafb;
-  color: #1e1e1e;
-  border-radius: 5px;
-}
-
-/* Section background colors for visual distinction */
-#welcome {
-  background:  #2c98f0;
-}
-
-#about,
-#education,
-#experience,
-#project,
-#skills,
-#contact{
-  background-color: white;
-}
-
-
-/* Styling for the section headings */
 h2 {
-  font-size: 2rem;  /* Reduced font size for headings */
-
-  color: #2c98f0;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+  margin: 0 auto 2.5rem auto;
+  color: var(--color-dark);
 }
 
-/* Paragraphs */
+h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--gradient-primary);
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--color-dark);
+}
+
 p {
-  font-size: 0.5rem;  /* Reduced font size for paragraph text */
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-  
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin: 0 0 1rem 0;
+  max-width: none;
 }
 
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition);
+}
 
+a:hover {
+  color: var(--color-primary-hover);
+}
 
-/* Fade-in and slide-up animation */
-@keyframes fadeInSlideUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+button {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
 }

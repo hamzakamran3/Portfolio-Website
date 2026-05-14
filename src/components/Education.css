@@ -1,82 +1,105 @@
-/* About Me section styling */
-#education {
-  background-color: white;  /* Ensure full white background */
-  padding: 5rem 2rem;       /* Add padding to give space around content */
-  color: #1e1e1e;           /* Dark text for readability */
-  min-height: 100vh;        /* Ensure it takes full screen height */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Align the content at the top */
+.education-section {
+  background-color: var(--color-bg-soft);
+  padding: 6rem 0;
 }
 
-/* Ensure extra space between the title and the top of the section */
-#education h2 {
-  font-family: 'Avenir', 'Proxima Nova', sans-serif;
-  margin-top: -5rem;         /* Add extra space from the top */
-  font-size: 3rem;          /* Keep the font size consistent */
+.education-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
-/* Remove content box style */
-#education .content-box {
+.education-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.education-header {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.degree {
+  font-size: 1.35rem;
+  margin: 0 0 0.35rem 0;
+  color: var(--color-dark);
+}
+
+.school {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.education-card .period {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 0;                /* Remove margins */
-  padding: 0;               /* Remove padding */
-  background: none;         /* Remove any background */
-  box-shadow: none;         /* Remove shadow */
-  border: none;             /* Remove any borders */
-  max-width: none;          /* Remove max width restriction */
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
 }
 
-/* Ensure wider text layout */
-#education .content-box p {
-  font-family: 'Avenir', 'Proxima Nova', sans-serif;
-  font-size: 1rem;   
-  color: #4d4d4d;   /* Smaller text size */
-  line-height: 1.8;         /* Adjusted line height for readability */
-  max-width: 800px;         /* Reduced width constraint */
-  margin: 0 auto;
-  text-align: left;
+.coursework h4 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
 }
 
-#education .content-course  {
-  display: flex;
-  justify-content: space-between;
+.coursework-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.6rem 1.25rem;
 }
 
-#education .content-course p {
-  font-family: 'Avenir', 'Proxima Nova', sans-serif;
-  font-size: 0.8rem;  
-  flex: 1;
-  margin: 0 10px; 
-  color: #4d4d4d;   /* Smaller text size */
-  line-height: 1.8;         /* Adjusted line height for readability */
-  max-width: 800px;         /* Reduced width constraint */
-  margin: 0 auto;
-  text-align: left;
+.coursework-grid li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.92rem;
+  color: var(--color-text);
+  line-height: 1.5;
 }
 
-.education-image {
-  margin-left: 100px;
-}
-.education-image img{
-  max-width: 200px;
-  height: auto;
-  border-radius: 10px;
+.coursework-grid li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--gradient-primary);
 }
 
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #education .content-box {
-    flex-direction: column;
+@media (max-width: 600px) {
+  .education-section {
+    padding: 5rem 0;
   }
 
+  .education-card {
+    padding: 1.75rem 1.5rem;
+  }
 
-
-  #education .content-box p {
-    max-width: 100%;
-    font-size: 1rem;        /* Smaller font size on mobile */
+  .degree {
+    font-size: 1.2rem;
   }
 }

@@ -7,13 +7,13 @@ import './SocialLinks.css';
 function SocialLinks() {
   return (
     <div className="social-links">
-      <a href="https://github.com/hamzakamran3" target="_blank" rel="noopener noreferrer" title="GitHub">
+      <a href="https://github.com/hamzakamran3" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
         <FontAwesomeIcon icon={faGithub} />
       </a>
-      <a href="https://www.linkedin.com/in/hamza-kamran-185982216/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+      <a href="https://www.linkedin.com/in/hamza-kamran-185982216/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
         <FontAwesomeIcon icon={faLinkedin} />
       </a>
-      <a href="mailto:hkamran002@gmail.com" title="Email">
+      <a href="mailto:hkamran002@gmail.com" aria-label="Email">
         <FontAwesomeIcon icon={faEnvelope} />
       </a>
     </div>

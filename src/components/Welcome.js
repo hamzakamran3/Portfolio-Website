@@ -1,40 +1,60 @@
-import { useEffect } from 'react';
 import React from 'react';
 import './Welcome.css';
 
 function Welcome() {
-  useEffect(() => {
-    // Scroll to a specific Y position within the Welcome section
-    // window.scrollTo(x-coord, y-coord);
-    window.scrollTo({
-      top: 200, // 200px down from the top of the page
-      behavior: 'smooth', // Optional: smooth scroll
-    });
-  }, []);
+  const scrollTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
-    <section id="welcome" className="home">
-      <div className="content-container">
-        <div className="text-left">
-          <h1>
-            Hey, I'm Hamza
-            <img 
-              src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3BleTZodTd1Mmh1ZGpkb2MxaGJpaGQ3c2Rrb3ZmdWZxa3Q3Mm90aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/w1OBpBd7kJqHrJnJ13/giphy.gif"
-              alt="Waving Hand" 
-              className="waving-hand"
-            />
-          </h1>
-        </div>
-        <div className="text-right">
-          <p>Discover my work, skills, and passion for development below.</p>
-          <div className="animated-arrow">
-            <img 
-              src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnN0aTViZ3IwZ3d1cnZrZ2tlNjI4YjZiYWg5dGN0cWhsc2hydGxleiZlcD12MV9naWZzX3NlYXJjaCZjdD1z/5QQ6FpAQ0syYLkONPB/giphy.gif" 
-              alt="Animated Arrow" 
-              className="arrow-gif" 
-            />
-          </div>
+    <section id="welcome" className="hero">
+      <div className="hero-bg" aria-hidden="true">
+        <span className="blob blob-1"></span>
+        <span className="blob blob-2"></span>
+        <span className="blob blob-3"></span>
+      </div>
+
+      <div className="hero-inner">
+        <span className="hero-eyebrow">Portfolio · 2025</span>
+        <h1 className="hero-title">
+          Hey, I&rsquo;m Hamza
+          <img
+            src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExd3BleTZodTd1Mmh1ZGpkb2MxaGJpaGQ3c2Rrb3ZmdWZxa3Q3Mm90aCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/w1OBpBd7kJqHrJnJ13/giphy.gif"
+            alt="Waving Hand"
+            className="waving-hand"
+          />
+        </h1>
+        <p className="hero-subtitle">
+          Junior Data Engineer · Software Engineer · AI &amp; ML Builder
+        </p>
+        <p className="hero-description">
+          I build reliable data pipelines, thoughtful AI workflows, and
+          interfaces people enjoy using. Take a look around &mdash; my work,
+          experience, and skills are just a scroll away.
+        </p>
+
+        <div className="hero-actions">
+          <button className="btn btn-primary" onClick={() => scrollTo('project')}>
+            View My Work
+          </button>
+          <button className="btn btn-ghost" onClick={() => scrollTo('about')}>
+            About Me
+          </button>
         </div>
       </div>
+
+      <button
+        type="button"
+        className="scroll-indicator"
+        onClick={() => scrollTo('about')}
+        aria-label="Scroll to about section"
+      >
+        <span className="scroll-mouse">
+          <span className="scroll-dot"></span>
+        </span>
+        <span className="scroll-label">Scroll</span>
+      </button>
     </section>
   );
 }

@@ -1,51 +1,101 @@
 import React from 'react';
 import './Experience.css';
 
+const EXPERIENCES = [
+  {
+    role: 'Junior Data Engineer',
+    company: 'Citylitics',
+    location: 'Toronto, ON',
+    period: 'May 2025 — Present',
+    bullets: [
+      'Owned data pipelines and dashboards for high-priority enterprise clients, ensuring clean data ingestion, accurate reporting, and reliable client deliverables.',
+      'Developed and maintained AI/LLM pipelines using Python, SQL, and Airflow DAGs to process 5,000+ results daily, including Elasticsearch queries against indices of 100k+ documents to power the retrieval layer.',
+      'Prototyped and evaluated agentic AI workflows to automate manual research, data extraction, and classification tasks, assessing trade-offs between cost, latency, and output quality.',
+      'Built analytics dashboards with Python, Dash, Plotly, Docker, and Cloud Run, saving 50+ hours/month and giving teams clearer visibility into client and product performance.',
+    ],
+    tags: ['Python', 'SQL', 'Airflow', 'Elasticsearch', 'LLM', 'AI Agents', 'Dash', 'Plotly', 'Docker', 'Cloud Run'],
+  },
+  {
+    role: 'Product Strategy & Automation Consultant (Freelance)',
+    company: 'Onshore Advisors',
+    location: 'Mississauga, ON',
+    period: 'Apr 2025 — Sep 2025',
+    bullets: [
+      'Defined product requirements, user workflows, and documentation in Jira to support onboarding automation; coordinated task sequencing and prioritization across engineering and operations.',
+      'Created Figma prototypes for an AI-based client assistant designed to reduce FAQ/onboarding calls; validated with 6 internal stakeholders and 2 pilot clients before handoff to engineering.',
+      'Documented workflows, acceptance criteria, and implementation notes in Confluence; consolidated onboarding processes into a dashboard, reducing onboarding time by 30%.',
+    ],
+    tags: ['Figma', 'Jira', 'Confluence', 'Product Requirements', 'AI Automation', 'Workflow Optimization'],
+  },
+  {
+    role: 'Software Development Intern (Co-op)',
+    company: 'J.D. Power',
+    location: 'London, ON',
+    period: 'May 2023 — Aug 2024',
+    bullets: [
+      'Collaborated across engineering and QA teams to scope, test, and ship features on a product used by 1,000+ daily users, contributing to multiple release cycles over a 16-month internship.',
+      'Improved load speed by 25% for 1,000+ users by optimizing React.js and JavaScript.',
+      'Reduced server response times by 20% by optimizing SQL queries and developing efficient backend APIs in Java (Spring Boot).',
+    ],
+    tags: ['JavaScript', 'React', 'Java', 'Spring Boot', 'SQL', 'TypeScript'],
+  },
+  {
+    role: 'Software Engineer Intern',
+    company: 'Swimingo',
+    location: 'Toronto, ON',
+    period: 'May 2022 — Aug 2022',
+    bullets: [
+      'Built and deployed a full-stack lesson booking platform using the MEAN stack (MongoDB, Express, Angular, Node.js), reducing manual bookings by 50% and improving user satisfaction by 20%.',
+      'Optimized MySQL queries and implemented GCP auto-scaling, cutting load times by 30% and reducing cloud costs by 20%.',
+      'Collaborated with a small agile team to scope and deliver features across the full development lifecycle, including code reviews, testing, and iterative releases.',
+    ],
+    tags: ['MongoDB', 'Express', 'Angular', 'Node.js', 'MySQL', 'GCP', 'Agile'],
+  },
+];
+
 function Experience() {
-  const experiences = [
-    {
-      role: 'Junior Data Engineer',
-      company: 'Citylitics',
-      period: 'May 2025 — Present',
-      description: `Increased internal data pipeline efficiency by 40% through optimized SQL queries and automation of client-specific data outputs. Built and containerized interactive dashboards with Python, Dash, Plotly, and Docker, saving 50+ hours/month and supporting faster product decisions. Developed an AI-powered customer-facing chatbot using Python and NLP tools, increasing user engagement by 25%. Debugged and maintained Cloud Run apps through log analysis and deployed Dockerized infrastructure updates using Terraform.`,
-      tags: ['Python', 'SQL', 'Dash', 'Plotly', 'Docker', 'Cloud Run', 'Terraform'],
-    },
-    {
-      role: 'Product Strategy & Automation Consultant (Freelance)',
-      company: 'Onshore Advisors',
-      period: 'Apr 2025 — August 2025',
-      description: `Consolidated systems into a centralized dashboard, reducing onboarding time by 30%. Prototyped an AI-based client assistant using Figma to handle FAQs/onboarding and reduce manual calls. Automated key client lifecycle steps and documented workflows in Confluence, increasing overall process efficiency by 25% and improving user experience. Defined product requirements and managed tasks through Jira to ensure progress and visibility on workflow improvements designed for future scalability.`,
-      tags: ['Figma', 'Confluence', 'Jira', 'AI Automation', 'Dashboard Development', 'Workflow Optimization', 'Process Improvement']    
-    },
-    {
-      role: 'Software Development Intern',
-      company: 'J.D. Power',
-      period: 'May 2023 — September 2024',
-      description: `Increased system stability by 15% for 5,000+ daily users by fixing critical bugs and adding key features. Improved page load speed by 25%, enhancing UX for 10,000+ monthly users, by optimizing HTML/CSS, JavaScript, and React.js. Improved API efficiency by 25% and reduced server response times by 20% by optimizing SQL queries and developing back-end APIs in Java with Spring Boot. Reduced production bugs by 15% by implementing Playwright tests with 95% coverage.`,
-      tags: ['JavaScript', 'Java', 'TypeScript', 'React', 'MSSQL', 'Springboot', 'PlayWright', 'Node.JS'],
-    },
-
-  ];
-
   return (
-    <section id="experience">
-      <h2>Experience</h2>
-      {experiences.map((experience, index) => (
-        <div key={index} className="experience-item">
-          <div className="experience-header">
-            <span className="experience-period">{experience.period}</span>
-            <span className="experience-role">
-              {experience.role} · <span className="experience-company">{experience.company}</span>
-            </span>
-          </div>
-          <p className="experience-description">{experience.description}</p>
-          <div className="experience-tags">
-            {experience.tags.map((tag, index) => (
-              <span key={index} className="tag">{tag}</span>
-            ))}
-          </div>
+    <section id="experience" className="experience-section">
+      <div className="container">
+        <h2>Experience</h2>
+
+        <div className="experience-timeline">
+          {EXPERIENCES.map((exp, idx) => (
+            <article className="experience-item" key={idx}>
+              <div className="timeline-marker" aria-hidden="true">
+                <span className="timeline-dot"></span>
+                {idx < EXPERIENCES.length - 1 && <span className="timeline-line"></span>}
+              </div>
+
+              <div className="experience-card">
+                <div className="experience-header">
+                  <div>
+                    <h3 className="experience-role">{exp.role}</h3>
+                    <p className="experience-meta">
+                      <span className="experience-company">{exp.company}</span>
+                      <span className="experience-divider">·</span>
+                      <span className="experience-location">{exp.location}</span>
+                    </p>
+                  </div>
+                  <span className="experience-period">{exp.period}</span>
+                </div>
+
+                <ul className="experience-bullets">
+                  {exp.bullets.map((bullet, i) => (
+                    <li key={i}>{bullet}</li>
+                  ))}
+                </ul>
+
+                <div className="experience-tags">
+                  {exp.tags.map((tag, i) => (
+                    <span key={i} className="tag">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
         </div>
-      ))}
+      </div>
     </section>
   );
 }

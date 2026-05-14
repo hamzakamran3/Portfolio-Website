@@ -1,98 +1,192 @@
-/* Experience section styling */
-#experience {
-  background-color: white;  /* Full white background */
-  padding: 5rem 2rem;
-  color: #1e1e1e;
-  min-height: 100vh;        /* Ensure it takes full screen height */
+.experience-section {
+  background-color: var(--color-bg);
+  padding: 6rem 0;
+}
+
+.experience-timeline {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  gap: 0;
 }
 
-/* Section title styling */
-#experience h2 {
-  font-family: 'Avenir', 'Proxima Nova', sans-serif;
-  font-size: 3rem;  /* Ensure the same size as Education */
-  margin-top: -5rem;  /* Move the title higher */
-  margin-bottom: 2rem;
-}
-
-/* Each experience item styling */
 .experience-item {
-  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 1.5rem;
+  position: relative;
 }
 
-/* Flexbox for the header part */
+.timeline-marker {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1.5rem;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--gradient-primary);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 2.25rem;
+  bottom: -1.75rem;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-border), transparent);
+}
+
+.experience-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  margin-bottom: 1.75rem;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.experience-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
+}
+
 .experience-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  font-size: 1rem;
-  color: #4d4d4d;
-  margin-bottom: 1rem;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
 }
 
-/* Period of the job */
-.experience-period {
-  font-weight: 600;
-  font-size: 1rem;  /* Keep the text size consistent with Education */
-  color: #666;
-}
-
-/* Role and company */
 .experience-role {
-  font-size: 1.2rem;  /* Match the font size with Education content */
-  font-weight: bold;
-  color: #1e1e1e;
+  font-size: 1.2rem;
+  margin: 0 0 0.35rem 0;
+  color: var(--color-dark);
+}
+
+.experience-meta {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
 }
 
 .experience-company {
-  font-weight: normal;
-  color: #666;
-  font-size: 1.2rem;  /* Ensure the same size for company name */
+  color: var(--color-primary);
+  font-weight: 600;
 }
 
-/* Description paragraph */
-.experience-description {
-  font-family: 'Avenir', 'Proxima Nova', sans-serif;
-  font-size: 0.8rem !important;  /* Force the description font smaller */
-  line-height: 1.6 !important;  /* Adjusted line height */
-  color: #050505 !important;
-  max-width: 800px;
+.experience-divider {
+  color: var(--color-border);
 }
 
-/* Tags (JavaScript, React, etc.) */
-.experience-tags {
-  margin-top: 1rem;
+.experience-location {
+  color: var(--color-text-muted);
+}
+
+.experience-period {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.experience-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem 0;
   display: flex;
-  gap: 0.5rem;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
-.tag {
-  background-color: #1e1e1e;
-  color: white;
-  border-radius: 20px;
-  padding: 0.3rem 0.8rem;
-  font-size: 0.6rem;  /* Same tag size as in Education section */
-  font-family: 'Avenir', 'Proxima Nova', sans-serif;
+.experience-bullets li {
+  position: relative;
+  padding-left: 1.4rem;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-text);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+.experience-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 2px;
+  background: var(--gradient-primary);
+  transform: rotate(45deg);
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.experience-tags .tag {
+  background: var(--color-bg-soft);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.experience-tags .tag:hover {
+  background: var(--color-primary);
+  color: #ffffff;
+  border-color: var(--color-primary);
+}
+
+@media (max-width: 720px) {
+  .experience-section {
+    padding: 5rem 0;
+  }
+
+  .experience-item {
+    grid-template-columns: 22px 1fr;
+    gap: 1rem;
+  }
+
+  .timeline-dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .experience-card {
+    padding: 1.5rem 1.25rem;
+  }
+
   .experience-header {
     flex-direction: column;
     align-items: flex-start;
   }
 
-  .experience-role, .experience-company {
-    font-size: 1.4rem;  /* Adjust font size for smaller screens */
-  }
-
-  .experience-description {
-    font-size: 0.8rem !important;  /* Force smaller font size for mobile */
-  }
-
-  .tag {
-    font-size: 0.75rem;
+  .experience-role {
+    font-size: 1.1rem;
   }
 }

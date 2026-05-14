@@ -1,65 +1,89 @@
 import React from 'react';
 import './Projects.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 
-// Import local images
 import weatherAppImage from '../assets/images/Weather.png';
-import unityImage from '../assets/images/unityImage.png'
-import spotifyImage from '../assets/images/spotify.png'
-import htcImage from '../assets/images/htc.png'
+import unityImage from '../assets/images/unityImage.png';
+import spotifyImage from '../assets/images/spotify.png';
+import htcImage from '../assets/images/htc.png';
 
-const projectsData = [
-
+const PROJECTS = [
   {
     title: 'Weather App',
-    description: 'A weather forecasting app using real-time weather API. The user can enter any city in the world and it will return the forecast for the next 5 days.',
+    description:
+      'A weather forecasting app using a real-time weather API. Users enter any city in the world to view the forecast for the next 5 days.',
     technologies: ['JavaScript', 'HTML', 'CSS'],
-    image: weatherAppImage,  // Local image
-    link: 'https://hamzakamran3.github.io/hamzakamran3-5-Day-Weather-Forecast/'
+    image: weatherAppImage,
+    link: 'https://hamzakamran3.github.io/hamzakamran3-5-Day-Weather-Forecast/',
   },
   {
     title: 'Music Website',
-    description: 'Created a Spotify-like website where you are able to create accounts, sign into accounts using a 3rd party/regular authentication, create/update playlists with numerous songs, search for songs and play them on YouTube',
-    technologies: ['JavaScript', 'HTML', 'CSS', 'React', 'MongoDB', 'Express'],
-    image: spotifyImage,  // Local image
-    link: null
+    description:
+      'A Spotify-style platform with third-party auth, playlist creation and updates, song search, and YouTube playback.',
+    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JavaScript'],
+    image: spotifyImage,
+    link: null,
   },
   {
-    title: 'Redemption Dungeons Game',
-    description: 'Created a 2-D 3rd person shooting game where the user has a choice of 5 different characters with different weapons. They would then fight 3 different enemies at 3 different levels. The user wins by defeating all levels.',
-    technologies: ['Unity Game Development', 'C#'],
-    image: unityImage,  // Local image
-    link: null
+    title: 'Redemption Dungeons',
+    description:
+      'A 2-D third-person shooter built in Unity with 5 playable characters, distinct weapons, and 3 progressively harder levels.',
+    technologies: ['Unity', 'C#', 'Game Design'],
+    image: unityImage,
+    link: null,
   },
   {
-    title: 'Exercise Prescription App for Hand Therapy Clinic (In Progress)',
-    description: 'An app for patients at the clinic to upload videos of themselves to watch later at home, there will also be a progress bar for them to see their achievements.',
-    technologies: ['Current project: TBD'],
-    image: htcImage,  // Local image
-    link: null
+    title: 'Exercise Prescription App',
+    description:
+      'An app for hand therapy clinic patients to upload videos and follow at-home exercise plans, with a progress tracker for goals.',
+    technologies: ['React Native', 'Node.js', 'MongoDB'],
+    image: htcImage,
+    link: null,
   },
 ];
 
 const Projects = () => {
   return (
-    <section id="project" className="section">
-      <h2>Projects</h2>
-      <div className="project-grid">
-        {projectsData.map((project, index) => (
-          <div className="project-item" key={index}>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              <img src={project.image} alt={project.title} className="project-thumbnail" />
-            </a>
-            <div className="project-info">
-              <h3>{project.title}</h3>
-              <p> {project.description}</p>
-              <div className="technologies">
-                {project.technologies.map((tech, idx) => (
-                  <span key={idx} className="tag">{tech}</span>
-                ))}
-              </div>
-            </div>
-          </div>
-        ))}
+    <section id="project" className="projects-section">
+      <div className="container">
+        <h2>Projects</h2>
+
+        <div className="project-grid">
+          {PROJECTS.map((project, index) => {
+            const CardTag = project.link ? 'a' : 'div';
+            const cardProps = project.link
+              ? { href: project.link, target: '_blank', rel: 'noopener noreferrer' }
+              : {};
+
+            return (
+              <CardTag
+                className={`project-card ${project.link ? 'is-linked' : ''}`}
+                key={index}
+                {...cardProps}
+              >
+                <div className="project-thumb">
+                  <img src={project.image} alt={project.title} />
+                  {project.link && (
+                    <span className="project-launch">
+                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                    </span>
+                  )}
+                </div>
+
+                <div className="project-info">
+                  <h3>{project.title}</h3>
+                  <p>{project.description}</p>
+                  <div className="project-tags">
+                    {project.technologies.map((tech, i) => (
+                      <span key={i} className="tag">{tech}</span>
+                    ))}
+                  </div>
+                </div>
+              </CardTag>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
