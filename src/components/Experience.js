@@ -16,7 +16,7 @@ const EXPERIENCES = [
     tags: ['Python', 'SQL', 'Airflow', 'Elasticsearch', 'LLM', 'AI Agents', 'Dash', 'Plotly', 'Docker', 'Cloud Run'],
   },
   {
-    role: 'Product Strategy & Automation Consultant (Freelance)',
+    role: 'AI Automation Consultant (Freelance)',
     company: 'Onshore Advisors',
     location: 'Mississauga, ON',
     period: 'Apr 2025 — Sep 2025',
