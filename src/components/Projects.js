@@ -7,8 +7,17 @@ import weatherAppImage from '../assets/images/Weather.png';
 import unityImage from '../assets/images/unityImage.png';
 import spotifyImage from '../assets/images/spotify.png';
 import htcImage from '../assets/images/htc.png';
+import marketPulseImage from '../assets/images/marketPulse.svg';
 
 const PROJECTS = [
+  {
+    title: 'Market Pulse',
+    description:
+      'An end-to-end data platform that streams live market data through a real-time pipeline (Redpanda → DuckDB) with schema validation, dead-letter handling, and idempotent writes. dbt and Great Expectations enforce data quality, PySpark engineers rolling-volatility and cross-ticker features, and an Isolation Forest model surfaces anomalies via a FastAPI service. Airflow orchestrates hourly runs and daily drift checks, MLflow tracks experiments, and a Streamlit dashboard visualizes live feeds, anomalies, and system health.',
+    technologies: ['Python', 'PySpark', 'dbt', 'DuckDB', 'Redpanda', 'Airflow', 'FastAPI', 'MLflow', 'scikit-learn', 'Streamlit'],
+    image: marketPulseImage,
+    link: 'https://github.com/hamzakamran3/market-pulse',
+  },
   {
     title: 'Weather App',
     description:

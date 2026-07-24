@@ -14,27 +14,27 @@ const CATEGORIES = [
   {
     icon: faCode,
     title: 'Languages & Frameworks',
-    skills: ['Python', 'SQL', 'Java', 'JavaScript', 'TypeScript', 'React', 'Node.js', 'Flask', 'Next.js'],
+    skills: ['Python', 'SQL', 'Java', 'JavaScript', 'TypeScript', 'React', 'Node.js', 'Flask', 'FastAPI', 'Next.js'],
   },
   {
     icon: faBrain,
     title: 'ML & AI',
-    skills: ['ML pipelines', 'Model training', 'Model monitoring', 'LLM pipelines', 'AI agents', 'Prompt engineering', 'scikit-learn', 'XGBoost'],
+    skills: ['ML pipelines', 'Model training', 'Model monitoring', 'Anomaly detection', 'LLM pipelines', 'AI agents', 'Prompt engineering', 'scikit-learn', 'XGBoost', 'MLflow'],
   },
   {
     icon: faDatabase,
     title: 'Data & Pipelines',
-    skills: ['Airflow', 'BigQuery', 'ETL/ELT', 'Batch processing', 'Stream processing', 'Elasticsearch', 'MongoDB', 'NoSQL'],
+    skills: ['Airflow', 'PySpark', 'dbt', 'BigQuery', 'DuckDB', 'Redpanda/Kafka', 'Data quality (Great Expectations)', 'ETL/ELT', 'Batch processing', 'Stream processing', 'PostgreSQL', 'Elasticsearch', 'MongoDB', 'NoSQL'],
   },
   {
     icon: faCloud,
     title: 'Cloud & Infrastructure',
-    skills: ['Google Cloud Platform', 'AWS', 'Docker', 'Terraform', 'Cloud Run', 'REST APIs', 'Multi-cloud'],
+    skills: ['Google Cloud Platform', 'AWS', 'Docker', 'Docker Compose', 'Databricks', 'Terraform', 'Cloud Run', 'REST APIs', 'Multi-cloud'],
   },
   {
     icon: faChartLine,
     title: 'Analytics & BI',
-    skills: ['Dash', 'Plotly', 'Power BI', 'Dashboard development'],
+    skills: ['Dash', 'Plotly', 'Streamlit', 'Power BI', 'Dashboard development'],
   },
   {
     icon: faToolbox,
