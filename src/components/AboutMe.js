@@ -15,25 +15,31 @@ function AboutMe() {
 
           <div className="about-text">
             <p>
-              Hello, I&rsquo;m <strong>Hamza Kamran</strong>. I&rsquo;m a Junior
-              Data Engineer and a graduate of Software Engineering from Western
-              University, with a strong foundation in full-stack development and
-              a growing interest in data-driven products.
+              Hello, I&rsquo;m <strong>Hamza Kamran</strong> &mdash; a Data
+              Engineer focused on AI, ML, and the systems that make them
+              dependable in production. I graduated in Software Engineering
+              from Western University, and I sit comfortably across the stack:
+              from the pipelines and models on the back end to the dashboards
+              and tools that put those insights in front of real users.
             </p>
             <p>
-              In my current role I work closely with the product team to build
-              scalable data pipelines, internal tools, and dashboards that
-              support key business decisions. I&rsquo;ve developed interactive
-              analytics solutions using Dash and Plotly, automated infrastructure
-              with Docker and Terraform, and used BigQuery and other Google
-              Cloud Platform services to process large datasets.
+              In my current role I design and own end-to-end data and AI/LLM
+              pipelines &mdash; ingestion, retrieval over large Elasticsearch
+              indices, orchestration in Airflow, and deployment on Google
+              Cloud Platform. I prototype agentic AI workflows to automate
+              research, extraction, and classification, and I treat
+              evaluation, monitoring, and cost/latency trade-offs as
+              first-class concerns rather than afterthoughts.
             </p>
             <p>
-              My technical experience includes Python, SQL, JavaScript, Java,
-              TypeScript, C++, and C#. I&rsquo;m also comfortable with frameworks
-              such as React, Node.js, Spring Boot, and MongoDB. I enjoy solving
-              problems with real impact and building software that is both
-              technically sound and user-focused.
+              I work closely with product, and I think like a product
+              engineer: shipping reliable analytics dashboards, scoping ML
+              features around the decisions they need to power, and asking
+              &ldquo;does this actually move the metric?&rdquo; before adding
+              complexity. My toolkit spans Python, SQL, scikit-learn, LLM and
+              retrieval pipelines, Airflow, BigQuery, Docker, Terraform, and
+              Cloud Run &mdash; alongside React and Node.js for when an idea
+              needs an interface to come alive.
             </p>
 
             <div className="about-stats">
