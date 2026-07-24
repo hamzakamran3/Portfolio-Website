@@ -15,31 +15,30 @@ function AboutMe() {
 
           <div className="about-text">
             <p>
-              Hello, I&rsquo;m <strong>Hamza Kamran</strong> &mdash; a Data
-              Engineer focused on AI, ML, and the systems that make them
-              dependable in production. I graduated in Software Engineering
-              from Western University, and I sit comfortably across the stack:
-              from the pipelines and models on the back end to the dashboards
-              and tools that put those insights in front of real users.
+              Hello, I&rsquo;m <strong>Hamza Kamran</strong>, a Data Engineer
+              focused on AI, ML, and the systems that keep them reliable in
+              production. I studied Software Engineering at Western University,
+              and I&rsquo;m comfortable across the stack, from the pipelines and
+              models on the back end to the dashboards and tools people
+              actually use.
             </p>
             <p>
-              In my current role I design and own end-to-end data and AI/LLM
-              pipelines &mdash; ingestion, retrieval over large Elasticsearch
-              indices, orchestration in Airflow, and deployment on Google
-              Cloud Platform. I prototype agentic AI workflows to automate
-              research, extraction, and classification, and I treat
-              evaluation, monitoring, and cost/latency trade-offs as
-              first-class concerns rather than afterthoughts.
+              Right now I design and own end-to-end data and AI/LLM pipelines.
+              That covers ingestion, retrieval over large Elasticsearch
+              indices, orchestration in Airflow, and deployment on Google Cloud
+              Platform. I also build agentic AI workflows to automate research,
+              extraction, and classification, and I pay close attention to
+              evaluation, monitoring, and the cost and latency trade-offs that
+              tend to get ignored until they hurt.
             </p>
             <p>
-              I work closely with product, and I think like a product
-              engineer: shipping reliable analytics dashboards, scoping ML
-              features around the decisions they need to power, and asking
-              &ldquo;does this actually move the metric?&rdquo; before adding
-              complexity. My toolkit spans Python, SQL, scikit-learn, LLM and
-              retrieval pipelines, Airflow, BigQuery, Docker, Terraform, and
-              Cloud Run &mdash; alongside React and Node.js for when an idea
-              needs an interface to come alive.
+              I work closely with product and try to think the way a product
+              engineer does: ship analytics dashboards people can trust, scope
+              ML features around the decisions they need to support, and make
+              sure the added complexity is actually worth it. My toolkit spans
+              Python, SQL, scikit-learn, LLM and retrieval pipelines, Airflow,
+              BigQuery, Docker, Terraform, and Cloud Run, plus React and
+              Node.js when an idea needs a front end to go with it.
             </p>
 
             <div className="about-stats">
