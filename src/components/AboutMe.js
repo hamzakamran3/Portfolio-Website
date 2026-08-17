@@ -41,20 +41,10 @@ function AboutMe() {
               Node.js when an idea needs a front end to go with it.
             </p>
 
-            <div className="about-stats">
-              <div className="about-stat">
-                <span className="stat-value">3+</span>
-                <span className="stat-label">Years building software</span>
-              </div>
-              <div className="about-stat">
-                <span className="stat-value">5,000+</span>
-                <span className="stat-label">Daily pipeline results</span>
-              </div>
-              <div className="about-stat">
-                <span className="stat-value">50+</span>
-                <span className="stat-label">Hours / month saved</span>
-              </div>
-            </div>
+            <p>
+              Outside of work, I like to play basketball, travel the world,
+              and go on hikes.
+            </p>
           </div>
         </div>
       </div>
