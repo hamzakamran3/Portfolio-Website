@@ -9,7 +9,7 @@ const EXPERIENCES = [
     period: 'May 2025 — Present',
     bullets: [
       'Owned data pipelines and dashboards for high-priority enterprise clients, ensuring clean data ingestion, accurate reporting, and reliable client deliverables.',
-      'Developed and maintained AI/LLM pipelines using Python, SQL, and Airflow DAGs to process 5,000+ results daily, including Elasticsearch queries against indices of 100k+ documents to power the retrieval layer.',
+      'Developed and maintained AI/LLM pipelines using Python, SQL, and Airflow DAGs to process 5,000+ results daily, including Elasticsearch queries against indices of 10M+ documents to power the retrieval layer.',
       'Prototyped and evaluated agentic AI workflows to automate manual research, data extraction, and classification tasks, assessing trade-offs between cost, latency, and output quality.',
       'Built analytics dashboards with Python, Dash, Plotly, Docker, and Cloud Run, saving 50+ hours/month and giving teams clearer visibility into client and product performance.',
     ],
