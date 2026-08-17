@@ -30,7 +30,7 @@ function Welcome() {
         </p>
         <p className="hero-description">
           I build reliable data pipelines, thoughtful AI workflows, and
-          interfaces people enjoy using. Take a look around &mdash; my work,
+          interfaces people enjoy using. Take a look around - my work,
           experience, and skills are just a scroll away.
         </p>
 
